@@ -299,7 +299,7 @@ function create_speaker_taxonomies()
   );
 
 //registers taxonomy specific post types - default is just post
-  register_taxonomy('Speakers',array('post'), array(
+  register_taxonomy('Speakers',array('room'), array(
     'hierarchical' => true,
     'labels' => $labels,
     'show_ui' => true,
