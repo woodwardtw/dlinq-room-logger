@@ -274,7 +274,7 @@ function create_hardware_taxonomies()
     'new_item_name' => __( 'New hardware' ),
     'add_or_remove_items' => __( 'Add or remove Hardware' ),
     'choose_from_most_used' => __( 'Choose from the most used Hardware' ),
-    'menu_name' => __( 'hardware' ),
+    'menu_name' => __( 'Hardware' ),
   );
 
 add_action( 'init', 'create_speaker_taxonomies', 0 );
@@ -295,7 +295,7 @@ function create_speaker_taxonomies()
     'new_item_name' => __( 'New speaker' ),
     'add_or_remove_items' => __( 'Add or remove Speakers' ),
     'choose_from_most_used' => __( 'Choose from the most used Speakers' ),
-    'menu_name' => __( 'speaker' ),
+    'menu_name' => __( 'Speaker' ),
   );
 
 //registers taxonomy specific post types - default is just post
