@@ -152,6 +152,53 @@
             "return_format": "id",
             "multiple": 0,
             "allow_null": 0
+        },
+        {
+            "key": "field_612e6d45d1dbf",
+            "label": "Tested",
+            "name": "tested",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Computer": "Computer",
+                "Document Camera": "Document Camera",
+                "Display": "Display",
+                "Crestron Panel": "Crestron Panel",
+                "Mic(s)": "Mic(s)",
+                "Speakers": "Speakers"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
+        },
+        {
+            "key": "field_612e6da0e743b",
+            "label": "General notes",
+            "name": "general_notes",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -186,5 +233,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1630430339
+    "modified": 1630432682
 }
