@@ -81,7 +81,7 @@ function create_building_taxonomies()
   // Add new taxonomy, NOT hierarchical (like tags)
   $labels = array(
     'name' => _x( 'Buildings', 'taxonomy general name' ),
-    'singular_name' => _x( 'building', 'taxonomy singular name' ),
+    'singular_name' => _x( 'Building', 'taxonomy singular name' ),
     'search_items' =>  __( 'Search Buildings' ),
     'popular_items' => __( 'Popular Buildings' ),
     'all_items' => __( 'All Buildings' ),
@@ -97,7 +97,7 @@ function create_building_taxonomies()
   );
 
 //registers taxonomy specific post types - default is just post
-  register_taxonomy('Buildings',array('room','post'), array(
+  register_taxonomy('Buildings',array('room'), array(
     'hierarchical' => true,
     'labels' => $labels,
     'show_ui' => true,
