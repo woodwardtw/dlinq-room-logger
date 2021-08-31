@@ -93,7 +93,7 @@ function create_building_taxonomies()
     'new_item_name' => __( 'New building' ),
     'add_or_remove_items' => __( 'Add or remove Buildings' ),
     'choose_from_most_used' => __( 'Choose from the most used Buildings' ),
-    'menu_name' => __( 'building' ),
+    'menu_name' => __( 'Building' ),
   );
 
 //registers taxonomy specific post types - default is just post
@@ -129,7 +129,7 @@ function create_number_taxonomies()
     'new_item_name' => __( 'New number' ),
     'add_or_remove_items' => __( 'Add or remove Numbers' ),
     'choose_from_most_used' => __( 'Choose from the most used Numbers' ),
-    'menu_name' => __( 'number' ),
+    'menu_name' => __( 'Room #' ),
   );
 
 //registers taxonomy specific post types - default is just post
@@ -277,6 +277,26 @@ function create_hardware_taxonomies()
     'menu_name' => __( 'Hardware' ),
   );
 
+
+//registers taxonomy specific post types - default is just post
+  register_taxonomy('Hardware',array('room'), array(
+    'hierarchical' => true,
+    'labels' => $labels,
+    'show_ui' => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'hardware' ),
+    'show_in_rest'          => true,
+    'rest_base'             => 'hardware',
+    'rest_controller_class' => 'WP_REST_Terms_Controller',
+    'show_in_nav_menus' => false,    
+  ));
+}
+
+
+
+
+
 add_action( 'init', 'create_speaker_taxonomies', 0 );
 function create_speaker_taxonomies()
 {
@@ -312,26 +332,4 @@ function create_speaker_taxonomies()
     'show_in_nav_menus' => false,    
   ));
 }
-
-
-
-
-//registers taxonomy specific post types - default is just post
-  register_taxonomy('Hardware',array('room'), array(
-    'hierarchical' => true,
-    'labels' => $labels,
-    'show_ui' => true,
-    'update_count_callback' => '_update_post_term_count',
-    'query_var' => true,
-    'rewrite' => array( 'slug' => 'hardware' ),
-    'show_in_rest'          => true,
-    'rest_base'             => 'hardware',
-    'rest_controller_class' => 'WP_REST_Terms_Controller',
-    'show_in_nav_menus' => false,    
-  ));
-}
-
-
-
-
 
