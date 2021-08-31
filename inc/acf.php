@@ -9,14 +9,14 @@
 defined( 'ABSPATH' ) || exit;
 
 	//save acf json
-		add_filter('acf/settings/save_json', 'oerxdomains_json_save_point');
+		add_filter('acf/settings/save_json', 'dlinq_room_json_save_point');
 		 
-		function oerxdomains_json_save_point( $path ) {
+		function dlinq_room_json_save_point( $path ) {
 		    
 		    // update path
-		    $path = plugin_dir_path(__FILE__) . '/acf-json'; //replace w get_stylesheet_directory() for theme
+		    $path = plugin_dir_path(__FILE__) . 'acf-json'; //replace w get_stylesheet_directory() for theme
 		    
-		    
+		    var_dump($path);
 		    // return
 		    return $path;
 		    
@@ -24,17 +24,18 @@ defined( 'ABSPATH' ) || exit;
 
 
 		// load acf json
-		add_filter('acf/settings/load_json', 'oerxdomains_json_load_point');
+		add_filter('acf/settings/load_json', 'dlinq_room_json_load_point');
 
-		function oerxdomains_json_load_point( $paths ) {
+		function dlinq_room_json_load_point( $paths ) {
 		    
 		    // remove original path (optional)
 		    unset($paths[0]);
 		    
 		    
 		    // append path
-		    $paths[] = plugin_dir_path(__FILE__) . '/acf-json';//replace w get_stylesheet_directory() for theme
-		    
+		    $paths[] = plugin_dir_path(__FILE__) . 'acf-json';//replace w get_stylesheet_directory() for theme
+		  		    var_dump($paths);
+  
 		    
 		    // return
 		    return $paths;
