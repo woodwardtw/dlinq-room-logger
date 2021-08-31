@@ -97,7 +97,7 @@ function create_building_taxonomies()
   );
 
 //registers taxonomy specific post types - default is just post
-  register_taxonomy('Buildings',array('room'), array(
+  register_taxonomy('Buildings',array('room','post'), array(
     'hierarchical' => true,
     'labels' => $labels,
     'show_ui' => true,
