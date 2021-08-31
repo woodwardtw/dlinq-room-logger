@@ -302,7 +302,7 @@ function create_speaker_taxonomies()
   register_taxonomy('Speakers',array('post'), array(
     'hierarchical' => true,
     'labels' => $labels,
-    'show_ui' => false,
+    'show_ui' => true,
     'update_count_callback' => '_update_post_term_count',
     'query_var' => true,
     'rewrite' => array( 'slug' => 'speaker' ),
