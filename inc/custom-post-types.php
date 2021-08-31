@@ -283,7 +283,7 @@ function create_speaker_taxonomies()
   // Add new taxonomy, NOT hierarchical (like tags)
   $labels = array(
     'name' => _x( 'Speakers', 'taxonomy general name' ),
-    'singular_name' => _x( 'speaker', 'taxonomy singular name' ),
+    'singular_name' => _x( 'Speaker', 'taxonomy singular name' ),
     'search_items' =>  __( 'Search Speakers' ),
     'popular_items' => __( 'Popular Speakers' ),
     'all_items' => __( 'All Speakers' ),
