@@ -165,7 +165,7 @@ function create_system_taxonomies()
     'new_item_name' => __( 'New system' ),
     'add_or_remove_items' => __( 'Add or remove Systems' ),
     'choose_from_most_used' => __( 'Choose from the most used Systems' ),
-    'menu_name' => __( 'system' ),
+    'menu_name' => __( 'System' ),
   );
 
 //registers taxonomy specific post types - default is just post
@@ -201,7 +201,7 @@ function create_camera_taxonomies()
     'new_item_name' => __( 'New camera' ),
     'add_or_remove_items' => __( 'Add or remove Cameras' ),
     'choose_from_most_used' => __( 'Choose from the most used Cameras' ),
-    'menu_name' => __( 'camera' ),
+    'menu_name' => __( 'Camera' ),
   );
 
 //registers taxonomy specific post types - default is just post
@@ -238,7 +238,7 @@ function create_mic_taxonomies()
     'new_item_name' => __( 'New mic' ),
     'add_or_remove_items' => __( 'Add or remove Mics' ),
     'choose_from_most_used' => __( 'Choose from the most used Mics' ),
-    'menu_name' => __( 'mic' ),
+    'menu_name' => __( 'Mic' ),
   );
 
 //registers taxonomy specific post types - default is just post
