@@ -15,9 +15,7 @@ defined( 'ABSPATH' ) || exit;
 		    
 		    // update path
 		    $path = plugin_dir_path(__FILE__) . 'acf-json'; //replace w get_stylesheet_directory() for theme
-		    
-		    var_dump($path);
-		    // return
+		    		    // return
 		    return $path;
 		    
 		}
@@ -34,7 +32,6 @@ defined( 'ABSPATH' ) || exit;
 		    
 		    // append path
 		    $paths[] = plugin_dir_path(__FILE__) . 'acf-json';//replace w get_stylesheet_directory() for theme
-		  		    var_dump($paths);
   
 		    
 		    // return
