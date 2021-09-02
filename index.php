@@ -56,12 +56,23 @@ if ( ! function_exists('write_log')) {
   //print("<pre>".print_r($a,true)."</pre>");
 
 //FIX TITLE ON QUOTES 
-function room_title ($post_id){
+function room_title (){
+   global $post;
+   if($post){
+       $post_id = $post->ID;
   $type = get_post_type($post_id);
   if ($type === 'room'){
     remove_action( 'save_post', 'room_title' );
-    $building = get_field('building', $post_id)->name;
-    $room_number = get_field('room_number', $post_id)->name;
+    if(get_field('building', $post_id)){
+      $building = get_field('building', $post_id)->name;
+    } else {
+      $building = "Not defined";
+    }
+    if(get_field('room_number', $post_id)){
+      $room_number = get_field('room_number', $post_id)->name;
+    }else {
+      $room_number = "Not defined";
+    }
     $room = $building . ' room '  . $room_number . ' review';
     $my_post = array(
         'ID'           => $post_id,
@@ -72,6 +83,8 @@ function room_title ($post_id){
     wp_update_post( $my_post );
   }
     add_action( 'save_post', 'room_title' );
+   }
+  
 }
 
 add_action( 'save_post', 'room_title', 10, 3 ); //don't forget the last argument to allow all three arguments of the function
